@@ -1,0 +1,23 @@
+{
+  "name": "cordova-plugin-native-intents",
+  "version": "0.1.0",
+  "description": "Cordova Plugin for Android handle (non-web) Intents",
+  "cordova": {
+    "id": "at.hobex.cordova.plugin.nativeintents",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hobex/cordova-plugin-native-intents"
+  },
+  "keywords": [
+    "cordova",
+    "intent",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Thomas Tisch, hobex Payment Solutions",
+  "license": "MIT"
+}
