@@ -22,10 +22,10 @@ This project is also released under MIT.  Credit is given in the code where appr
   Intent-Filter has to be set inAndroidManifest.xml on desired Activity:
 
 
-      <intent-filter>
-          <action android:name="at.hobex.smart.MainActivity.TRANSACTION" />
-          <category android:name="android.intent.category.DEFAULT" />
-      </intent-filter>
+    <intent-filter>
+      <action android:name="at.hobex.smart.MainActivity.TRANSACTION" />
+      <category android:name="android.intent.category.DEFAULT" />
+    </intent-filter>
 
 ## Supported Platforms
 - Android
