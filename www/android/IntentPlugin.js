@@ -15,13 +15,7 @@ function IntentPlugin() {
 IntentPlugin.prototype.onIntent = function(successCallback, failureCallback) {
   'use strict';
 
-  return cordova.exec (
-    successCallback,
-    failureCallback,
-    "IntentPlugin",
-    "onIntent",
-    []
-  );
+  return cordova.exec(successCallback, failureCallback, "IntentPlugin", "onIntent", []);
 };
 
 // IntentShim ...
@@ -41,52 +35,52 @@ IntentPlugin.prototype.RESULT_OK = -1; //  Activity.RESULT_OK
 
 IntentPlugin.prototype.startActivity = function(params, successCallback, errorCallback) {
   argscheck.checkArgs('off', 'IntentPlugin.startActivity', arguments);
-  exec(successCallback, errorCallback, "IntentShim", "startActivity", [params]);
+  exec(successCallback, errorCallback, "IntentPlugin", "startActivity", [params]);
 };
 
 IntentPlugin.prototype.setResult = function(params, successCallback, errorCallback) {
   //argscheck.checkArgs('off', 'IntentPlugin.setResult', arguments);
-  exec(successCallback, errorCallback, "IntentShim", "setResult", [params]);
+  exec(successCallback, errorCallback, "IntentPlugin", "setResult", [params]);
 };
 
 IntentPlugin.prototype.startActivityForResult = function(params, successCallback, errorCallback) {
   argscheck.checkArgs('off', 'IntentPlugin.startActivity', arguments);
-  exec(successCallback, errorCallback, "IntentShim", "startActivityForResult", [params]);
+  exec(successCallback, errorCallback, "IntentPlugin", "startActivityForResult", [params]);
 };
 
 IntentPlugin.prototype.sendBroadcast = function(params, successCallback, errorCallback) {
   argscheck.checkArgs('off', 'IntentPlugin.sendBroadcast', arguments);
-  exec(successCallback, errorCallback, "IntentShim", "sendBroadcast", [params]);
+  exec(successCallback, errorCallback, "IntentPlugin", "sendBroadcast", [params]);
 };
 
 IntentPlugin.prototype.sendBroadcast = function(params, successCallback, errorCallback) {
   argscheck.checkArgs('off', 'IntentPlugin.sendBroadcast', arguments);
-  exec(successCallback, errorCallback, "IntentShim", "sendBroadcast", [params]);
+  exec(successCallback, errorCallback, "IntentPlugin", "sendBroadcast", [params]);
 };
 
 IntentPlugin.prototype.registerBroadcastReceiver = function(params, callback) {
   argscheck.checkArgs('of', 'IntentPlugin.registerBroadcastReceiver', arguments);
-  exec(callback, null, "IntentShim", "registerBroadcastReceiver", [params]);
+  exec(callback, null, "IntentPlugin", "registerBroadcastReceiver", [params]);
 };
 
 IntentPlugin.prototype.unregisterBroadcastReceiver = function() {
   argscheck.checkArgs('', 'IntentPlugin.unregisterBroadcastReceiver', arguments);
-  exec(null, null, "IntentShim", "unregisterBroadcastReceiver", []);
+  exec(null, null, "IntentPlugin", "unregisterBroadcastReceiver", []);
 };
 
-IntentPlugin.prototype.onIntent = function(callback) {
-  argscheck.checkArgs('f', 'IntentPlugin.onIntent', arguments);
-  exec(callback, null, "IntentShim", "onIntent", [callback]);
-};
+// IntentPlugin.prototype.onIntent = function(callback) {
+//   argscheck.checkArgs('f', 'IntentPlugin.onIntent', arguments);
+//   exec(callback, null, "IntentShim", "onIntent", [callback]);
+// };
 
 IntentPlugin.prototype.onActivityResult = function(callback) {
   argscheck.checkArgs('f', 'IntentPlugin.onActivityResult', arguments);
-  exec(callback, null, "IntentShim", "onActivityResult", [callback]);
+  exec(callback, null, "IntentPlugin", "onActivityResult", [callback]);
 };
 
 IntentPlugin.prototype.getIntent = function(successCallback, failureCallback) {
   argscheck.checkArgs('ff', 'IntentPlugin.getIntent', arguments);
-  exec(successCallback, failureCallback, "IntentShim", "getIntent", []);
+  exec(successCallback, failureCallback, "IntentPlugin", "getIntent", []);
 };
 
 // window.intentShim = new IntentShim();
