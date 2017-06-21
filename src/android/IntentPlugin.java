@@ -63,7 +63,7 @@ public class IntentPlugin extends CordovaPlugin {
       JSONObject obj = data.getJSONObject(0);
       //Intent intent = obj.has("intent") ? obj.getString("intent") : null;
       //Intent intent = cordova.getActivity().getIntent();
-      Intent intent = new Intent("at.hobex.smart.MainActivity.TRANSACTION");
+      Intent intent = new Intent(obj.getString("intent"));
       intent.putExtra("successful","true");
       intent.putExtra("test", obj.getString("test"));
       intent.putExtra("test2", "test2");

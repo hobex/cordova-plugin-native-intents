@@ -34,8 +34,16 @@ This project is also released under MIT.  Credit is given in the code where appr
 
 ### Handling Intents - onIntent()
 
+Usually you would place this handler in deviceReady() listener in your app.js file to have a central entry point:
+
+``` javascript
+document.addEventListener('deviceReady', function() {
+  // window.plugins.intent.onIntent(function (Intent) { ... }); ...
+}
+```
+
 ```javascript
-window.plugins.intent.onIntent(function (Intent) {
+window.plugins.intent.onIntent(function (intent) {
   // Success Callback for new Intent
   // ...
 }, function () {
@@ -48,6 +56,8 @@ window.plugins.intent.onIntent(function (Intent) {
 
 ```javascript
 window.plugins.intent.setResult({
+    // intent
+    intent: 'at.hobex.smart.MainActivity.TRANSACTION'
     // result extra data
     successful: true
   },
