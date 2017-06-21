@@ -2,8 +2,6 @@
 
 =========================================================
 
-[![npm licence](http://img.shields.io/npm/l/com-darryncampbell-cordova-plugin-intent.svg?style=flat-square)](https://npmjs.org/package/com-darryncampbell-cordova-plugin-intent "View this project on npm")
-
 ### This plugin is provided without guarantee or warranty!
 
 # Overview
