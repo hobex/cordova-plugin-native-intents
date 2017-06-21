@@ -2,8 +2,6 @@
 
 =========================================================
 
-[![npm licence](http://img.shields.io/npm/l/com-darryncampbell-cordova-plugin-intent.svg?style=flat-square)](https://npmjs.org/package/com-darryncampbell-cordova-plugin-intent "View this project on npm")
-
 ### This plugin is provided without guarantee or warranty!
 
 # Overview
@@ -19,13 +17,13 @@ This project is also released under MIT.  Credit is given in the code where appr
 
     cordova plugin add https://github.com/hobex/cordova-plugin-native-intents.git
 
-  Intent-Filter has to be set inAndroidManifest.xml on desired Activity:
+  Intent-Filter has to be set in AndroidManifest.xml on desired Activity of main App:
 
 
-          <intent-filter>
-              <action android:name="at.hobex.smart.MainActivity.TRANSACTION" />
-              <category android:name="android.intent.category.DEFAULT" />
-          </intent-filter>
+    <intent-filter>
+      <action android:name="at.hobex.smart.MainActivity.TRANSACTION" />
+      <category android:name="android.intent.category.DEFAULT" />
+    </intent-filter>
 
 ## Supported Platforms
 - Android
