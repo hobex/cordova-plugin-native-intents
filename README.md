@@ -17,7 +17,7 @@ This project is also released under MIT.  Credit is given in the code where appr
 
     cordova plugin add https://github.com/hobex/cordova-plugin-native-intents.git
 
-  Intent-Filter has to be set inAndroidManifest.xml on desired Activity:
+  Intent-Filter has to be set in AndroidManifest.xml on desired Activity:
 
 
     <intent-filter>
