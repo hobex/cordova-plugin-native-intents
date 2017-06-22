@@ -61,14 +61,17 @@ public class IntentPlugin extends CordovaPlugin {
     // IntentShim ...
     if(action.equals("setResult")) {
       JSONObject obj = data.getJSONObject(0);
-      //Intent intent = obj.has("intent") ? obj.getString("intent") : null;
-      //Intent intent = cordova.getActivity().getIntent();
+
+      // read intent action name from params
       Intent intent = new Intent(obj.getString("intent"));
-      intent.putExtra("successful","true");
-      intent.putExtra("test", obj.getString("test"));
-      intent.putExtra("test2", "test2");
-      cordova.getActivity().setResult(-1, intent);
-      //cordova.getActivity().setResult(cordova.getActivity().RESULT_OK);
+
+      // read all params
+      for(int i = 0; i<obj.names().length(); i++){
+        //Log.v(TAG, "key = " + obj.names().getString(i) + " value = " + obj.get(obj.names().getString(i)));
+        intent.putExtra(obj.names().getString(i), obj.getString(obj.names().getString(i)));
+      }
+
+      cordova.getActivity().setResult(-1/*-1 = RESULT_OK*/, intent);
       cordova.getActivity().finish();
     }
     else if (action.equals("onIntent"))
