@@ -35,7 +35,7 @@ Apparently ``android:launchMode `` has to be set to ``singleTop``. Otherwise sta
 
 ```xml
 <activity android:launchMode="singleTop" android:name="MainActivity" ... >
-  ``
+```
 
  **config.xml**
 
