@@ -20,10 +20,28 @@ This project is also released under MIT.  Credit is given in the code where appr
   Intent-Filter has to be set in AndroidManifest.xml on desired Activity of main App:
 
 
-    <intent-filter>
-      <action android:name="at.hobex.smart.MainActivity.TRANSACTION" />
-      <category android:name="android.intent.category.DEFAULT" />
-    </intent-filter>
+```xml
+<intent-filter>
+  <action android:name="at.hobex.smart.MainActivity.TRANSACTION" />
+  <category android:name="android.intent.category.DEFAULT" />
+</intent-filter>
+```
+
+### Attention!
+
+Apparently ``android:launchMode `` has to be set to ``singleTop``. Otherwise startActivityForResult() in triggering app gets resultCode 0 immediately! (At least on older API versions < 18)
+
+**AndroidManifest.xml**
+
+```xml
+<activity android:launchMode="singleTop" android:name="MainActivity" ... >
+  ``
+
+ **config.xml**
+
+ ```xml
+<preference name="AndroidLaunchMode" value="singleTop"/>
+```
 
 ## Supported Platforms
 - Android
