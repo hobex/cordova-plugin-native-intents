@@ -1,5 +1,5 @@
 {
-  "name": "cordova-plugin-native-intents",
+  "name": "at.hobex.cordova.plugin.nativeintents",
   "version": "0.1.0",
   "description": "Cordova Plugin for Android handle (non-web) Intents",
   "cordova": {
