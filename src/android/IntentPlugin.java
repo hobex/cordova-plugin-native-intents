@@ -73,6 +73,8 @@ public class IntentPlugin extends CordovaPlugin {
 
       cordova.getActivity().setResult(-1/*-1 = RESULT_OK*/, intent);
       cordova.getActivity().finish();
+      
+      return true;
     }
     else if (action.equals("onIntent"))
     {
