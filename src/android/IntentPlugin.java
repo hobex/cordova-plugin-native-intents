@@ -70,9 +70,11 @@ public class IntentPlugin extends CordovaPlugin {
         //Log.v(TAG, "key = " + obj.names().getString(i) + " value = " + obj.get(obj.names().getString(i)));
         intent.putExtra(obj.names().getString(i), obj.getString(obj.names().getString(i)));
       }
-
+      
       cordova.getActivity().setResult(-1/*-1 = RESULT_OK*/, intent);
-      cordova.getActivity().finish();
+      cordova.getActivity().finishAndRemoveTask();
+      // totally exit process to prevent performance leaks
+      System.exit(0);
       
       return true;
     }
